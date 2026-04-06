@@ -1,0 +1,63 @@
+public class ArrayChecker {
+
+	public static void main(String[] args) {
+
+		int values[][] = {
+
+				{100, 200, 300, 400},
+				{10, 20, 30, 40},
+				{1, 2, 3, 4},
+				{5, 15, 30, 90}
+
+		};
+
+		System.out.println("Original Array:");
+
+		for (int row = 0; row < values.length; row++) {
+
+			for (int col = 0; col < values[row].length; col++) {
+
+				System.out.print(values[row][col] + " ");
+
+			}
+
+			System.out.println("");
+
+		}
+
+		for (int row = 0; row < values.length; row++) {
+
+			for (int col = 0; col < values[row].length; col++) {
+
+				if (values[row][col] == 15) {
+
+					System.out.println("\nValue 15 found at position: " + row + " and " + col);
+
+				}
+
+			}
+
+		}
+
+		System.out.println("\nModified Array:");
+
+		for (int row = 0; row < values.length; row++) {
+
+			for (int col = 0; col < values[row].length; col++) {
+
+				if (values[row][col] == 15) {
+
+					values[row][col] = 99;
+
+				}
+
+				System.out.print(values[row][col] + " ");
+
+			}
+
+			System.out.println("");
+
+		}
+
+	}
+}
